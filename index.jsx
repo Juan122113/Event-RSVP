@@ -8,7 +8,7 @@ export function EventRSVPForm() {
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState();
   const [checkbox, setCheckbox] = useState();
-  const [dietary, setDietary] = useState("");
+  const [dietary, setDietary] = useState("None");
   const [submitBool, setSubmitBool] = useState(false);
 
   //const handleInputChanged = ((e) => {});
@@ -49,6 +49,14 @@ export function EventRSVPForm() {
 
       <div style={{display: submitBool ? "block" : "none"}}>
         <h1>RSVP Submit!</h1>
+
+        <li>
+          <ul>Name: {name}</ul>
+          <ul>Email: {email}</ul>
+          <ul>Number of Attendees: {number}</ul>
+          <ul>Dietary Preferences: {dietary}</ul>
+          <ul></ul>
+        </li>
       </div>
       {/* {if (submitBool) {
         <div></div>
