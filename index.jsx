@@ -2,29 +2,17 @@ const { useState } = React;
 
 export function EventRSVPForm() {
 
-  // let submitBool = false;
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState();
-  const [checkbox, setCheckbox] = useState();
+  const [checkbox, setCheckbox] = useState(false);
   const [dietary, setDietary] = useState("None");
   const [submitBool, setSubmitBool] = useState(false);
 
-  //const handleInputChanged = ((e) => {});
-
   const handleSubmit = (e) => {
       e.preventDefault();
-      // submitBool=true;
       setSubmitBool(true);
-      console.log(submitBool);
   }
-  console.log(submitBool);
-  // const rsvpSubm = (submitBool) => {submitBool ? "block" : "none"}
-
-  // function rsvpSubm(submitBool) {
-  //   submitBool ? "block" : "none";
-  // }
  
   return(
     <div>
@@ -55,25 +43,11 @@ export function EventRSVPForm() {
           <ul>Email: {email}</ul>
           <ul>Number of Attendees: {number}</ul>
           <ul>Dietary Preferences: {dietary}</ul>
-          <ul></ul>
+          <ul>Additional guests: {checkbox ? "Yes" : "No"}</ul>
         </li>
       </div>
-      {/* {if (submitBool) {
-        <div></div>
-        }
-      }; */}
-      <div>
-        {/* {if (submitBool) {
-        <div></div>
-        } */}
-        {/* {submitBool : <div></div> : } */}
-      </div>
     </div>
-
-    // {if (submitBool) {
-    //   <div></div>
-    //   }
-    // }
+    
   );
 
 }
